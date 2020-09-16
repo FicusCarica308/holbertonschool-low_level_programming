@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - main in this code uses the function puts to print a string
- *return: returns 0 when done
+ *main - main in this code uses the function puts to print a string
+ *Return: returns 0 when done
  */
 int main(void)
 {
