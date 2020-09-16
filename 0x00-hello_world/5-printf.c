@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  *main - This program prints a string using the printf function then ends
- *Return - returns 0 when finished
+ *Return: returns 0 when finished
  */
 int main(void)
 {
