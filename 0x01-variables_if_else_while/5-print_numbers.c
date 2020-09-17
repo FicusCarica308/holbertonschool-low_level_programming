@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- *main - prints out the alphabet lowercase a-z using putchar and for loop
+ *main - prints out the numbers 0-0 using only putchar
  *Without characters e or q
  *Return: returns 0 when done
  */
