@@ -10,7 +10,7 @@ int main(void)
 {
 	char curChar;
 
-     	for (curChar = '0' ; curChar <= '9' ; curChar++)
+	for (curChar = '0' ; curChar <= '9' ; curChar++)
 	{
 		putchar(curChar);
 	}
