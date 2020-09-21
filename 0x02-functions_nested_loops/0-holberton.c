@@ -5,6 +5,8 @@
  */
 int main(void)
 {
-	printf("Holberton\n");
+	char c;
+
+	while(c 
 	return (0);
 }
