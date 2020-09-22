@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include "holberton.h"
-
+/**
+ *jack_bauer - this function prints a clock count from 00:00 to 23:59
+ */
 void jack_bauer(void)
 {
 	int a;
@@ -18,5 +20,4 @@ void jack_bauer(void)
 			_putchar('\n');
 		}
 	}
-	return (0);
 }
