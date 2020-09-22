@@ -1,5 +1,16 @@
 #include <stdio.h>
 #include "holberton.h"
+
+/**
+ *_putchar - This functions will print a given char
+ *Return: returns the char
+ *@c: This parameter holds whatever char the function is called with to be used
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
+
 /**
  * main - prints "Holberton" followed by a new line
  *Return: returns 0
