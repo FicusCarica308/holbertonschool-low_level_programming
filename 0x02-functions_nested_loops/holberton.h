@@ -3,8 +3,6 @@
 #include <unistd.h>
 #include <stdio.h>
 
-int _putchar(char c);
-
 /**
  *print_alphabet - This functions prints the alphabet
  *Return: returns nothing
@@ -56,11 +54,8 @@ int _islower(int c)
 		}
 	}
 	if (check == 1)
-	{
 		return (1);
-	} else
-	{
-		return (0);
-	}
+
+	return (0);
 }
 #endif
