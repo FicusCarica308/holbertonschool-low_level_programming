@@ -1,20 +1,25 @@
 #include "holberton.h"
+#include <stdio.h>
 
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * _islower - asdasd
+ *Return:asd
+ *@c:sad
  */
-int main(void)
+int _islower(int c)
 {
-	int r;
+	int i;
+	int check = 0;
 
-	r = _islower('H');
-	_putchar(r + '0');
-	r = _islower('o');
-	_putchar(r + '0');
-	r = _islower(108);
-	_putchar(r + '0');
-	_putchar('\n');
+	for (i = 97; i <= 122; i++)
+	{
+		if (c == i)
+		{
+			check++;
+		}
+	}
+	if (check == 1)
+		return (1);
+
 	return (0);
 }
