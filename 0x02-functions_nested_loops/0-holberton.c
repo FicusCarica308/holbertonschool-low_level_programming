@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include "holberton.h"
 
-int _putchar(char c);
 /**
  * main - prints "Holberton" followed by a new line
  *Return: returns 0
@@ -17,6 +16,6 @@ int main(void)
 	_putchar('t');
 	_putchar('o');
 	_putchar('n');
-	putchar('\n');
+	_putchar('\n');
 	return (0);
 }
