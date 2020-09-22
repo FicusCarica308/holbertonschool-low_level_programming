@@ -1,11 +1,17 @@
-#include <stdio.h>
-#include "holberton.h"
 /**
- *main - calls our print_alphabet_x10 function
- *Return: function returns 0
+ *print_alphabet_x10 - prints the alphabet 10 times
  */
-int main(void)
+void print_alphabet_x10(void)
 {
-	print_alphabet_x10();
-	return (0);
+	char c;
+	int i;
+
+	for (i = 0; i <= 9 ; i++)
+	{
+		for (c = 'a' ; c <= 'z' ; c++)
+		{
+			_putchar(c);
+		}
+		_putchar('\n');
+	}
 }
