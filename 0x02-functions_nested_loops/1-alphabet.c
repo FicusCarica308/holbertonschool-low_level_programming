@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- *main - calls our print_alphabet function
- *Return: function returns 0
+ *print_alphabet - This functions prints the alphabet
+ *Return: returns nothing
  */
-int main(void)
+void print_alphabet(void)
 {
-	print_alphabet();
-	return (0);
+        char c;
+
+        for (c = 'a' ; c <= 'z' ; c++)
+        {
+                _putchar(c);
+        }
+        putchar('\n');
 }

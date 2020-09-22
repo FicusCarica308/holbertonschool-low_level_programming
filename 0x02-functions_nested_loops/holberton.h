@@ -3,20 +3,7 @@
 #include <unistd.h>
 #include <stdio.h>
 
-/**
- *print_alphabet - This functions prints the alphabet
- *Return: returns nothing
- */
-void print_alphabet(void)
-{
-	char c;
-
-	for (c = 'a' ; c <= 'z' ; c++)
-	{
-		_putchar(c);
-	}
-	putchar('\n');
-}
+void print_alphabet(void);
 
 /**
  *print_alphabet_x10 - prints the alphabet 10 times
