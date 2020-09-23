@@ -15,10 +15,10 @@ void times_table(void)
 		for (j = 0 ; j <= 9 ; j++)
 		{
 			oper = i * j;
-			if(oper >= 10)
+			if (oper >= 10)
 			{
 				first = oper;
-				while(first >= 10)
+				while (first >= 10)
 				{
 					first = first / 10;
 				}
@@ -27,7 +27,8 @@ void times_table(void)
 				_putchar(first + '0');
 				oper = oper % 10;
 				_putchar(oper + '0');
-			} else {
+			} else
+			{
 				if (j > 0)
 				{
 				_putchar(',');
