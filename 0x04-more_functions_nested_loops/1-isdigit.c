@@ -1,5 +1,5 @@
 #include <stdio.h>
-#inlcude "holberton.b"
+#include "holberton.b"
 /**
  *_isdigit - checks a given character if its a digit from 0 to 9
  *Return: returns 1 if it is a digit and 0 otherwise
