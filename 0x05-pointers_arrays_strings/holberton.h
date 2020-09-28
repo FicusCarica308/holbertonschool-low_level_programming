@@ -1,5 +1,6 @@
 #ifndef _HOLBERTON_H_
 #define _HOLBERTON_H_
+int _putchar(char c);
 void swap_int(int *a, int *b);
 void reset_to_98(int *n);
 int _strlen(char *s);

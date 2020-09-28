@@ -1,3 +1,4 @@
+#incdlue "holberton.h"
 #include <stdio.h>
 /**
  *reset_to_98 - changes the value of a given pointer to 98
