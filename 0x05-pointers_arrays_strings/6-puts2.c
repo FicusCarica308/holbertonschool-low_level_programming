@@ -2,7 +2,7 @@
 #include "holberton.h"
 /**
  *puts2 - prints every other value of an array
- *@str: the given string to be printed 
+ *@str: the given string to be printed
  */
 void puts2(char *str)
 {
