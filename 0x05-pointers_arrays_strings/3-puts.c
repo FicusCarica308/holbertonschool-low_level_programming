@@ -13,6 +13,9 @@ void _puts(char *str)
 	{
 		length++;
 	}
+
+	length = length - 1;
+
 	for (i = 0; i <= length; i++)
 		_putchar(str[i]);
 	_putchar('\n');
