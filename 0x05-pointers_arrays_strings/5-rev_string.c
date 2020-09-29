@@ -18,7 +18,7 @@ void rev_string(char *s)
 	}
 	for (i = 0; i < length - 1; i++)
 		end++;
-	for (i = 0; i < length/2; i++)
+	for (i = 0; i < length / 2; i++)
 	{
 		holder = *end;
 		*end = *start;
