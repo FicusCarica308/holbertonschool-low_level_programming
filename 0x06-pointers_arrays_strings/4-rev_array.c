@@ -12,10 +12,8 @@ void reverse_array(int *a, int n)
 	int i = n - 1;
 	int j = 0;
 
-	for ( ; i > 0; i--)
+	for ( ; j < i; i--)
 	{
-		if (a[j] >= a[i])
-			break;
 		holder = a[j];
 		a[j] = a[i];
 		a[i] = holder;
