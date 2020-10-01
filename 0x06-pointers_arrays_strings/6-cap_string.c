@@ -14,7 +14,7 @@ char *cap_string(char *a)
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 12; j++)
+		for (j = 0; j <= 13; j++)
 		{
 			if (a[i - 1] == ascii[j])
 			{
