@@ -16,7 +16,7 @@ char *cap_string(char *a)
 	{
 		for (j = 0; j <= 12; j++)
 		{
-			if (a[i - 1] == ascii[j])
+			if (a[i - 1] == ascii[j] || i == 0)
 			{
 				if (a[i] >= 97 && a[i] <= 122)
 				{
