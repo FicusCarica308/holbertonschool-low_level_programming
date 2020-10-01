@@ -12,7 +12,7 @@ void reverse_array(int *a, int n)
 	int i = 0;
 	int j = 0;
 
-	for (i = n - 1; i >= 0; i--)
+	for (i = n - 1; i > 0; i--)
 	{
 		if (a[j] >= a[i])
 			break;
