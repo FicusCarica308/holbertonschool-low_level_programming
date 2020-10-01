@@ -9,12 +9,12 @@ char *cap_string(char *a)
 {
 	int i = 0;
 	int j = 0;
-	char ascii[] = {' ', '\n', '.', 9, ',', ';', '!',
+	char ascii[] = {' ', '\n', '.', '\t', ',', ';', '!',
 			'?', '"', '(', ')', '{', '}' };
 
 	for (i = 0; a[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 13; j++)
+		for (j = 0; j <= 12; j++)
 		{
 			if (a[i - 1] == ascii[j])
 			{
