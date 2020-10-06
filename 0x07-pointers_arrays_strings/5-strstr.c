@@ -1,10 +1,11 @@
 #include <stdio.h>
 #include "holberton.h"
 /**
- *_strstr - descritpion
- *@haystack: the script to look through
- *@needle: the dopsjfioes zu
- *Return: returns null if not found or returns haystack pointer if found
+ *_strstr - Write a function that locates a substring within a parent string
+ *@haystack: the parent string
+ *@needle: the substring we are searching for
+ *Return: returns null if not found/parent string
+ * or returns pointer to the found substring
  */
 char *_strstr(char *haystack, char *needle)
 {
