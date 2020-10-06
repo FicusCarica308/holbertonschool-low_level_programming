@@ -1,6 +1,11 @@
 #include <stdio.h>
 #include "holberton.h"
-
+/**
+ *_strstr - descritpion
+ *@haystack: the script to look through
+ *@needle: the dopsjfioes zu
+ *Return: returns null if not found or returns haystack pointer if found
+ */
 char *_strstr(char *haystack, char *needle)
 {
 	int i = 0;
@@ -12,7 +17,7 @@ char *_strstr(char *haystack, char *needle)
 	{
 	}
 
-	if ( length < 1 )
+	if (length < 1)
 	{
 		return (haystack);
 	}
