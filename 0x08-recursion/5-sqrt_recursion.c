@@ -12,7 +12,8 @@ int find_factor(int n, int a)
 	if (a * a > n)
 		return (-1);
 	if (a * a == n)
-		return (find_factor(n, a + 1));
+		return (a);
+	return (find_factor(n, a + 1));
 }
 /**
  *_sqrt_recursion - returns the square root of a number
