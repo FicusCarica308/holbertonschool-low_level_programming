@@ -24,8 +24,8 @@ int check_string(char *s, int a)
 
 	if (s[a] != s[(length - a)])
 		return (0);
-	if (a + 1 != length)
-		check_string(s, a + 1);
+	if (a >= length)
+		return (check_string(s, a + 1));
 	return (1);
 }
 /**
