@@ -12,6 +12,16 @@ int string_length(char *s)
 	else
 		return (1 + string_length(s + 1));
 }
+int find_factor(char *s, int a)
+{
+	int length = string_length(s) - 1;
+
+	if (s[a] != s[(length - a)])
+		return (0);
+	if (a + 1 != length)
+                find_factor(s, a + 1);
+	return (1);
+}
 /**
  *is_palindrome - will find if a a given string is a palindrome
  *@s: the string we are testing
@@ -19,9 +29,8 @@ int string_length(char *s)
  */
 int is_palindrome(char *s)
 {
-	int length = string_length(s) - 1;
 
-	if (*s == s[length] && s[1] == s[length - 1])
+	if (find_factor(s, 0) == 1)
 		return (1);
 	return (0);
 }
