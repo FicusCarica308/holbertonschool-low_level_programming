@@ -21,7 +21,7 @@ int is_palindrome(char *s)
 {
 	int length = string_length(s) - 1;
 
-	if (*s == s[length])
+	if (*s == s[length] && s[1] == s[length - 1])
 		return (1);
 	return (0);
 }
