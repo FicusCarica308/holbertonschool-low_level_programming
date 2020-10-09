@@ -10,41 +10,29 @@ int main(int argc __attribute__((unused)), char *argv[])
 {
 	int num = atoi(argv[1]);
 	int count = 0;
+	int i = 0;
+	int coins[5] = {25, 10, 5, 2, 1};
 
 	if (argc > 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	if (num < 0)
+	{
 		printf("0\n");
+		return (0);
+	}
 	while (num > 0)
 	{
-		if (num % 25 == 0)
+		if (num % coins[i] == 0)
 		{
-			num -= 25;
+			num -= coins[i];
 			count++;
+			i = 0;
 		}
-		else if (num % 10 == 0)
-		{
-			num -= 10;
-			count++;
-		}
-		else if (num % 5 == 0)
-		{
-			num -= 5;
-			count++;
-		}
-		else if (num % 2 == 0)
-		{
-			num -= 2;
-			count++;
-		}
-		else if (num % 1 == 0)
-		{
-			num -= 1;
-			count++;
-		}
+		else
+			i++;
 	}
 	printf("%d\n", count);
 	return (0);
