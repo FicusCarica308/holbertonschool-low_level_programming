@@ -11,7 +11,7 @@ int main(int argc, char *argv[])
 {
 	int i;
 	int sum = 0;
-	int ret;
+	int test;
 
 	if (argc == 1)
 	{
@@ -21,8 +21,9 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		ret = strcmp(argv[i], "0");
-		if (atoi(argv[i]) == 0 && ret != 0)
+		test = strcmp(argv[i], "0");
+
+		if ((atoi(argv[i]) == 0 && test != 0) || argc < 3)
 		{
 			printf("Error\n");
 			return (1);
