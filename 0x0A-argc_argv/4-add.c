@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
+#include <ctype.h>
 /**
  *main - will print the sum of only positiv numbers input by argument
  *@argc: the amount of arguments passed to the file
@@ -11,22 +11,24 @@ int main(int argc, char *argv[])
 {
 	int i = 0;
 	int sum = 0;
-	int test;
+	int j = 0;
 
-	if (argc == 0)
+	if (argc == 1)
 	{
 		printf("0\n");
-		return (1);
+		return (0);
 	}
 
 	for (i = 1; i < argc; i++)
 	{
-		test = strcmp(argv[i], "0");
-
-		if (atoi(argv[i]) == 0 && test != 0)
+		for (j = 0; argv[i][j] != '\0'; j++)
 		{
-			printf("Error\n");
-			return (1);
+
+			if (isdigit(argv[i][j]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 		sum += atoi(argv[i]);
 	}
