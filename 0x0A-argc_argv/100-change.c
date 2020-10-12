@@ -25,7 +25,7 @@ int main(int argc __attribute__((unused)), char *argv[])
 	}
 	while (num > 0)
 	{
-		if (num >= coins[i])
+		if (num % coins[i] == 0)
 		{
 			num -= coins[i];
 			count++;
