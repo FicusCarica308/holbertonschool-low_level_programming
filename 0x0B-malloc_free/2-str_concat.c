@@ -27,7 +27,7 @@ char *str_concat(char *s1, char *s2)
 	if (s2 == NULL)
 		s2 = "";
 
-	str = malloc(sizeof(char) + (totalSize * sizeof(char)));
+	str = malloc(totalsize + 1);
 
 	if (str == NULL)
 		return (NULL);
@@ -40,6 +40,5 @@ char *str_concat(char *s1, char *s2)
 		str[i] = s2[j];
 		i++;
 	}
-	str[i - 1] = '\0';
 	return (str);
 }
