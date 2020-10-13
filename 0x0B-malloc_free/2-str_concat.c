@@ -1,14 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "holberton.h"
-int length(char *str)
-{
-	int length = 0;
-	for (length = 0; str[length] != '\0'; length++)
-	{
-	}
-	return (length);
-}
 /**
  *str_concat - concatenate two strings
  *@s1: the src string
@@ -20,14 +12,20 @@ char *str_concat(char *s1, char *s2)
 	char *str;
 	unsigned int i = 0;
 	unsigned int j = 0;
-	int totalSize = length(s1) + length(s2);
+	int k = 0;
+	int b = 0;
 
 	if (s1 == NULL)
 		s1 = "";
 	if (s2 == NULL)
 		s2 = "";
+	while (s[k] != '\0')
+		k++;
 
-	str = malloc(totalSize + 1);
+	while (s[b] != '\0')
+		b++;
+
+	str = malloc(k + b + 1);
 
 	if (str == NULL)
 		return (NULL);
