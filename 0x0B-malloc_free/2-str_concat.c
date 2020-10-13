@@ -7,7 +7,7 @@ int length(char *str)
 	for (length = 0; str[length] != '\0'; length++)
 	{
 	}
-	return (length + 1);
+	return (length);
 }
 /**
  *str_concat - concatenate two strings
@@ -22,7 +22,7 @@ char *str_concat(char *s1, char *s2)
 	unsigned int j = 0;
 	int totalSize = length(s1) + length(s2);
 
-	str = malloc(totalSize * sizeof(char));
+	str = malloc(sizeof(char) + (totalSize * sizeof(char)));
 
 	if (str == NULL)
 		return (NULL);
