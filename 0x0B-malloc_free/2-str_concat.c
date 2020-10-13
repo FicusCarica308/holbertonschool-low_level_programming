@@ -7,7 +7,7 @@ int length(char *str)
 	for (length = 0; str[length] != '\0'; length++)
 	{
 	}
-	return (length);
+	return (length + 1);
 }
 /**
  *str_concat - concatenate two strings
