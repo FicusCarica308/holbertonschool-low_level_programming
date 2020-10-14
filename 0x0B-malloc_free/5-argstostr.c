@@ -25,10 +25,7 @@ char *argstostr(int ac, char **av)
 	hold = malloc((sizeof(char) * bites) + (sizeof(char) * ac));
 
 	if (hold == NULL)
-	{
-		free(hold);
 		return (NULL);
-	}
 
 	for (i = 0; i < ac; i++)
 	{
