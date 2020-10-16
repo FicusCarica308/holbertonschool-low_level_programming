@@ -3,16 +3,17 @@
 #include <string.h>
 #include "holberton.h"
 /**
- *_realloc - bla
- *@ptr: n;a
- *@old_size: bla
- *@new_size: bla
- *Return: bla
+ *_realloc - script that mimicks the realloc functions
+ *@ptr: the original pointer to the memory
+ *@old_size: the size in bytes of ptr (the original memory)
+ *@new_size: the new size we want to allocate to ptr
+ *Return: Returns a pointer to the new memory
  */
 void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-	unsigned int count = 0, i = 0, j = 0;
-	char *trash, *ptr1 = ptr;
+	char *new;
+	char *p = ptr;
+	unsigned int a = 0;
 
 	if (new_size == old_size)
 		return (ptr);
@@ -28,34 +29,11 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 			return (NULL);
 		return (ptr);
 	}
-	trash = malloc(new_size);
-	if (trash == NULL)
-	{
-		free(trash);
-		return (NULL);
-	}
-
 	if (new_size < old_size)
-	{
-		for(j = 0; j < old_size; j++)
-			trash[j] = ptr1[j];
-	}
-	else
-	{
-	count = (new_size - old_size) + 1;
-	for (i = 0; i < count; i++)
-		trash[i] = ptr1[i];
+		old_size = new_size;
+	new = malloc(new_size);
+	for (a = 0; a < old_size; a++)
+		new[a] = p[a];
 	free(ptr);
-	}
-	ptr1 = malloc(new_size);
-	if (ptr1 == NULL)
-	{
-		free(ptr1);
-		free(trash);
-		return (NULL);
-	}
-	for (i = 0; i < new_size; i++)
-		ptr1[i] = trash[i];
-	free(trash);
-	return (ptr1);
+	return (new);
 }
