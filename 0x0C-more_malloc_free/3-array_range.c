@@ -10,23 +10,23 @@
 int *array_range(int min, int max)
 {
 	int *arr;
+	int j = 0;
 	int i = 0;
 	int k = 0;
-	int mem = max * sizeof(int);
 
 	if (min > max)
 		return (NULL);
+	for (j = min; j <= max; j++)
+	{
+	}
 
-	if (min == 0)
-		mem = (max + 1) * sizeof(int);
-
-	arr = malloc(mem);
+	arr = malloc(j * sizeof(int));
 	if (arr == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
-	for (i = min; i < max; i++)
+	for (i = min; i <= max; i++)
 	{
 		arr[k] = i;
 		k++;
