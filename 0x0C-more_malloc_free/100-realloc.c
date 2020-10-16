@@ -39,6 +39,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	count = (new_size - old_size) + 1;
 	for (i = 0; i < count; i++)
 		trash[i] = ptr1[i];
+	free(trash);
 	free(ptr);
 	ptr1 = malloc(new_size);
 	if (ptr1 == NULL)
