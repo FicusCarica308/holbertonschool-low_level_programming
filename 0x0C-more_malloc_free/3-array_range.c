@@ -19,14 +19,14 @@ int *array_range(int min, int max)
 	for (j = min; j <= max; j++)
 	{
 	}
-
+	printf("%d", j);
 	arr = malloc(j * sizeof(int));
 	if (arr == NULL)
 	{
 		free(arr);
 		return (NULL);
 	}
-	for (i = min; i <= max; i++)
+	for (i = min; i < max; i++)
 	{
 		arr[k] = i;
 		k++;
