@@ -24,8 +24,6 @@ int length(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog_dog;
-	char *store_owner;
-	char *store_name;
 	int length1 = length(name);
 	int length2 = length(owner);
 
@@ -33,19 +31,19 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (dog_dog == NULL)
 		return (NULL);
 
-	store_owner = malloc(length2 * sizeof(char));
-	if (store_owner == NULL)
+	owner = malloc(length2 * sizeof(char));
+	if (owner == NULL)
 	{
 		free(dog_dog);
-		free(store_owner);
+		free(owner);
 		return (NULL);
 	}
-	store_name = malloc(length1 * sizeof(char));
-	if (store_name == NULL)
+	name = malloc(length1 * sizeof(char));
+	if (name == NULL)
 	{
 		free(dog_dog);
-		free(store_owner);
-		free(store_name);
+		free(owner);
+		free(name);
 		return (NULL);
 	}
 
