@@ -12,6 +12,7 @@ int length(char *s)
 
 	while (s[length] != '\0')
 		length++;
+	printf("%d\n", length);
 	return (length);
 }
 /**
@@ -43,6 +44,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 	store_name = malloc(length1 * sizeof(char));
 	if (store_name == NULL)
 	{
+		free(dog_dog);
 		free(store_owner);
 		free(store_name);
 		return (NULL);
