@@ -12,7 +12,6 @@ int length(char *s)
 
 	while (s[length] != '\0')
 		length++;
-	printf("%d\n", length);
 	return (length);
 }
 /**
