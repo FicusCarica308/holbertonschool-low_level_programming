@@ -21,14 +21,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	store_owner = malloc(sizeof(owner));
+	store_owner = malloc(sizeof(owner) + 1);
 	if (store_owner == NULL)
 	{
 		free(dog_dog);
 		free(store_owner);
 		return (NULL);
 	}
-	store_name = malloc(sizeof(name));
+	store_name = malloc(sizeof(name) + 1);
 	if (store_name == NULL)
 	{
 		free(dog_dog);
