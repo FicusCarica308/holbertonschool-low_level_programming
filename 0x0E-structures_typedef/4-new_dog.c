@@ -44,7 +44,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 	store_name = malloc(length1 * sizeof(char));
-	if (name == NULL)
+	if (store_name == NULL)
 	{
 		free(dog_dog);
 		free(store_owner);
