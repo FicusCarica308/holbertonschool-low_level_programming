@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
+
 /**
  *length - finds the length of a string given
  *@s: the string
  *Return: returns the length of the string
  */
+/*
 int length(char *s)
 {
 	int length = 0;
@@ -14,6 +16,7 @@ int length(char *s)
 		length++;
 	return (length);
 }
+*/
 /**
  *new_dog - creates a new dog struct
  *@name: the name of the dog
@@ -24,8 +27,8 @@ int length(char *s)
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *dog_dog;
-	int length1 = length(name);
-	int length2 = length(owner);
+/*	int length1 = length(name);
+	int length2 = length(owner);*/
 	char *store_owner;
 	char *store_name;
 
@@ -36,14 +39,14 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	store_owner = malloc(length2 * sizeof(char));
+	store_owner = malloc(sizeof(owner));
 	if (store_owner == NULL)
 	{
 		free(dog_dog);
 		free(store_owner);
 		return (NULL);
 	}
-	store_name = malloc(length1 * sizeof(char));
+	store_name = malloc(sizeof(name));
 	if (store_name == NULL)
 	{
 		free(dog_dog);
