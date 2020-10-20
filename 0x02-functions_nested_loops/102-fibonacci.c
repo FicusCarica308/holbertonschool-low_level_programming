@@ -10,7 +10,7 @@ int main(void)
 	unsigned long int b = 0;
 	int i = 0;
 
-	for (i = 0; i < 25; i++)
+	for (i = 0; i <= 25; i++)
 	{
 		b = a + b;
 		printf("%lu\n", a);
