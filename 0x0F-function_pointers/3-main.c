@@ -14,13 +14,13 @@ int main(int argc, char *argv[])
 
 	if (argc > 4 || argc < 4)
 	{
-		printf("Error1\n");
+		printf("Error\n");
 		exit(98);
 	}
 
 	if (num2 == 0)
 	{
-		printf("Error2");
+		printf("Error\n");
 		exit(100);
 	}
 
@@ -28,10 +28,10 @@ int main(int argc, char *argv[])
 
 	if (p == NULL)
 	{
-		printf("Error3\n");
+		printf("Error\n");
 		exit(99);
 	}
 
-	printf("%d", (*p)(num1, num2));
+	printf("%d\n", (*p)(num1, num2));
 	return (0);
 }

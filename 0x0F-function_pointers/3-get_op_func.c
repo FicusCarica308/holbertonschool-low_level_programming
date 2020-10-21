@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "3-calc.h"
+#include <string.h>
 /**
  *get_op_func - will find which function to return depending on a given
  * operator
@@ -20,9 +21,9 @@ int (*get_op_func(char *s))(int, int)
 
 	int i = 0;
 
-	while (i < 6)
+	while (i < 5)
 	{
-		if (ops[i].op == s)
+		if (strcmp(s, ops[i].op) == 0)
 		{
 			return (ops[i].f);
 		}
