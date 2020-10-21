@@ -11,4 +11,9 @@ void print_name(char *name, void (*f)(char *))
 {
 	if (name != NULL)
 		f(name);
+	else
+	{
+		name[0] = ' ';
+		f(name);
+	}
 }
