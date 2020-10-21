@@ -2,15 +2,16 @@
 #include <stdlib.h>
 #include "3-calc.h"
 /**
- *
- * 2 3 4
- *
+ *main - works like a calculator using two numbers and a operator input
+ *@argc: How many arguments there are
+ *@argv: the arguments that are given
+ *Return: returns 0 if succesful, or will exit with code 98 through 100
  */
 int main(int argc, char *argv[])
 {
 	int num1 = atoi(argv[1]);
 	int num2 = atoi(argv[3]);
-	int (*p)(int,int);
+	int (*p)(int, int);
 
 	if (argc > 4 || argc < 4)
 	{
