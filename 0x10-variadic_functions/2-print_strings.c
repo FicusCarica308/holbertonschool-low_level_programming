@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  *print_strings - this function prints a varible number of strings
- *@seperator: the string that will seperate each given string
+ *@separator: the string that will seperate each given string
  *@n: the number of arguments passed to the function
  */
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -19,7 +19,7 @@ void print_strings(const char *separator, const unsigned int n, ...)
 			check = va_arg(list, char*);
 			if (check == NULL)
 			{
-				printf("%p", check);
+				printf("(nil)");
 			}
 			else
 			{
