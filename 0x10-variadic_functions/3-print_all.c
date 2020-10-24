@@ -34,7 +34,7 @@ void print_all(const char * const format, ...)
 				printf("(nil)");
 				break;
 			}
-				printf("%s", check);
+			printf("%s", check);
 			break;
 		default:
 			count = 1;
@@ -46,5 +46,4 @@ void print_all(const char * const format, ...)
 	}
 	va_end(list);
 	printf("\n");
-	}
 }
