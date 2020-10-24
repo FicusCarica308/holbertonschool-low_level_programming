@@ -13,8 +13,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 	char *check;
 	int count = 0;
 
-	if (n > 0)
-	{
 		va_start(list, n);
 		for (i = 1; i <= n; i++)
 		{
@@ -32,6 +30,5 @@ void print_strings(const char *separator, const unsigned int n, ...)
 				printf("%s", separator);
 		}
 		va_end(list);
-	}
 	printf("\n%d", count);
 }
