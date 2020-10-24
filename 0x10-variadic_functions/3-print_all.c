@@ -12,8 +12,6 @@ void print_all(const char * const format, ...)
 	int count = 0;
 	char *check;
 
-	if (format != NULL)
-	{
 	va_start(list, format);
 	while (format[i] != '\0')
 	{
@@ -32,8 +30,10 @@ void print_all(const char * const format, ...)
 		case 's':
 			check = va_arg(list, char*);
 			if (check == NULL)
+			{
 				printf("(nil)");
-			else
+				break;
+			}
 				printf("%s", check);
 			break;
 		default:
