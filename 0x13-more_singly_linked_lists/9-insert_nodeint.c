@@ -36,7 +36,7 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	unsigned int index_max = find_max_index(*head);
 	unsigned int i = 0;
 
-	if (head == NULL)
+	if (*head == NULL)
 		return (NULL);
 
 	newNode = malloc(sizeof(listint_t));
@@ -44,7 +44,6 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		return (NULL);
 	if (idx > index_max)
 		return (NULL);
-
 	if (idx == 0)
 	{
 		newNode->n = n;
@@ -52,14 +51,11 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 		*head = newNode;
 		return (*head);
 	}
-	else
-	{
+
 	for (i = 0; i < idx - 1; i++)
 		index = index->next;
-
 	newNode->next = index->next;
 	index->next = newNode;
 	newNode->n = n;
-	}
 	return (newNode);
 }
