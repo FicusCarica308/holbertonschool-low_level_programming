@@ -8,12 +8,16 @@ int main(void)
 {
 	unsigned long int a = 1;
 	unsigned long int b = 0;
+	int start = 0;
 	int i = 0;
 
 	for (i = 0; i <= 25; i++)
 	{
 		b = a + b;
-		printf("%lu\n", a);
+		if (start > 0)
+			printf("%lu\n", a);
+		else
+			start++;
 		a = b + a;
 		printf("%lu\n", b);
 	}
