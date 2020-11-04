@@ -13,8 +13,9 @@ int main(void)
 
 	for (i = 0; i <= 51; i++)
 	{
-		printf("%lu", num);
-		if (i != 51)
+		if (i > 1)
+			printf("%lu", num);
+		if (i != 51 && i > 1)
 			printf(", ");
 		hold = num + num2;
 		num = num2;
