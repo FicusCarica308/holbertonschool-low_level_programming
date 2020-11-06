@@ -11,7 +11,7 @@ int get_bit(unsigned long int n, unsigned int index)
 	int shift, num;
 
 	/*checks if index is greater than 8 bits*/
-	if (index > 63)
+	if (index > 64)
 		return (-1);
 
 	shift = n >> index;
