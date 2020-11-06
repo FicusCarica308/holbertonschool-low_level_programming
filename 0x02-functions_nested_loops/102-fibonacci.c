@@ -6,16 +6,21 @@
  */
 int main(void)
 {
-	unsigned long int a = 1;
-	unsigned long int b = 0;
+	unsigned long int num = 0;
+	unsigned long int num2 = 1;
+	unsigned long int hold = 0;
 	int i = 0;
 
-	for (i = 0; i <= 25; i++)
+	for (i = 0; i <= 51; i++)
 	{
-		b = a + b;
-		printf("%lu\n", a);
-		a = b + a;
-		printf("%lu\n", b);
+		if (i > 1)
+			printf("%lu", num);
+		if (i != 51 && i > 1)
+			printf(", ");
+		hold = num + num2;
+		num = num2;
+		num2 = hold;
 	}
+	printf("\n");
 	return (0);
 }
