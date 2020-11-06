@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- *
+ *main - this program finds the sum of every even fibonacci number
+ *from one to 4000000
+ *Return: returns 0 when complete
  */
 int main(void)
 {
