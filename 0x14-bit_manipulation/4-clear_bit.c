@@ -12,7 +12,7 @@ int clear_bit(unsigned long int *n, unsigned int index)
 	int newIdx;
 	unsigned long int shift;
 
-	if (index > 64)
+	if (index >= 64)
 		return (-1);
 	newIdx = 1 << index;
 	shift = 0 << index;
