@@ -6,6 +6,15 @@
 #include <unistd.h>
 #include "holberton.h"
 /**
+ *check - collects a system call return value and checks if it returned error
+ *@sysCall: the system call return value
+ */
+void check(int sysCall)
+{
+	if (sysCall == -1)
+		exit(0);
+}
+/**
  * read_textfile -  a function that reads a text file and prints it to
  * the POSIX standard output.
  *@filename: The file we are printing
@@ -25,14 +34,11 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 	fd = open(filename, O_RDONLY);
-	if (fd == -1)
-		return (0);
+	check(fd);
 	act_size = read(fd, buffer, letters);
-	if (act_size == -1)
-		return (0);
+	check(act_size);
 	char_count = write(STDOUT_FILENO, buffer, act_size);
-	if (char_count == -1)
-		return (0);
+	check(char_count);
 	free(buffer);
 	close(fd);
 
