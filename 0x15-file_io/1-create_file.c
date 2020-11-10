@@ -34,7 +34,7 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	length = string_length(text_content);
 
-	fd = open(filename, O_WRONLY | O_CREAT | O_EXCL);
+	fd = open(filename, O_WRONLY | O_CREAT);
 	if (fd == -1)
 		return (-1);
 	for (i = 0; i < length; i++)
