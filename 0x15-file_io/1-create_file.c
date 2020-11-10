@@ -37,12 +37,13 @@ int create_file(const char *filename, char *text_content)
 	fd = open(filename, O_WRONLY | O_CREAT);
 	if (fd == -1)
 		return (-1);
-	for (i = 0; i < length; i++)
-	{
-		print = write(fd, text_content, length);
-		if (print == -1)
-			return (-1);
-	}
+	if (length != 0)
+		for (i = 0; i < length; i++)
+		{
+			print = write(fd, text_content, length);
+			if (print == -1)
+				return (-1);
+		}
 	close(fd);
 	return (1);
 }
