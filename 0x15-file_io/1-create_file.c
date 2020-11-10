@@ -28,7 +28,6 @@ int create_file(const char *filename, char *text_content)
 	int fd;
 	int length;
 	int print;
-	int i = 0;
 
 	if (filename == NULL)
 		return (-1);
@@ -37,12 +36,9 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	if (text_content != NULL)
 		length = string_length(text_content);
-		for (i = 0; i < length; i++)
-		{
-			print = write(fd, text_content, length);
-			if (print == -1)
-				return (-1);
-		}
+	print = write(fd, text_content, length);
+	if (print == -1)
+		return (-1);
 	close(fd);
 	return (1);
 }
