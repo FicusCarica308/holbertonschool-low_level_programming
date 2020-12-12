@@ -27,6 +27,5 @@ dlistint_t *add_dnodeint_end(dlistint_t **head, const int n)
 		temp_head->next = new_end;
 		new_end->prev = temp_head;
 	}
-	return (new_end);/*or *head whichever the checker takes*/
-	/*or temp_head if checker takes it*/
+	return (new_end);
 }
