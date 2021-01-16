@@ -49,7 +49,7 @@ int element_count(const hash_table_t *ht, unsigned int index_max)
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned int index_max, index, ele_count;
+	unsigned int index, ele_count;
 	hash_node_t *temp = NULL;
 
 	if (ht == NULL || ht->size == 0)
@@ -58,11 +58,10 @@ void hash_table_print(const hash_table_t *ht)
 		return;
 	}
 
-	index_max = ht->size - 1;
-	ele_count = element_count(ht, index_max);
+	ele_count = element_count(ht, ht->size);
 
 	printf("{");
-	for (index = 0; index < index_max && ele_count != 0; index++)
+	for (index = 0; index < ht->size && ele_count != 0; index++)
 	{
 		temp = ht->array[index];
 		if (temp != NULL && temp->next == NULL)
