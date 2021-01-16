@@ -1,31 +1,68 @@
 #include "hash_tables.h"
 
 /**
- * hash_table_print - prints out all elements of a has table
- * @ht: the table input
- * Return: void
+*print_ele - prints the element our hash table array
+*@ele_count: ele_count is how many elements are left to print from the array
+*@temp: this is the current index value of our hash array from origin function
+*Return: returns ele_count minus one to signal a element has been printed
+*/
+int print_ele(unsigned int ele_count, hash_node_t *temp)
+{
+	printf("'%s': '%s'", temp->key, temp->value);
+	if (ele_count > 1)
+	{
+		ele_count--;
+		printf(", ");
+	}
+	return (ele_count);
+}
+
+/**
+ *element_count - finds how many elements need to be printed from hash list
+ *@ht: the hash table struct
+ *@index_max: the max index of our hash list
+ *Return: returns the amount of elements to be printed (count)
+ */
+int element_count(const hash_table_t *ht, unsigned int index_max)
+{
+	unsigned int count = 0, index = 0;
+	hash_node_t *temp = NULL;
+
+	for (index = 0; index < index_max; index++)
+	{
+			temp = ht->array[index];
+			while (temp != NULL)
+			{
+				count++;
+				temp = temp->next;
+			}
+	}
+	return (count);
+}
+
+/**
+ *hash_table_print - will print out a given hash table
+ *@ht: the hash table struct containing hash array list
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int index, comma = 0;
-	hash_node_t *current;
+	unsigned int index, ele_count;
+	hash_node_t *temp = NULL;
 
 	if (ht == NULL)
 		return;
+
+	ele_count = element_count(ht, ht->size);
+
 	printf("{");
-	for (index = 0; index < ht->size; index++)
+	for (index = 0; index < ht->size && ele_count != 0; index++)
 	{
-		if (ht->array[index] == NULL)
-			continue;
-		current = ht->array[index];
-		while (current != NULL)
-		{
-			if (comma == 1)
-				printf(", ");
-			printf("\'%s\': \'%s\'", current->key, current->value);
-			comma = 1;
-			current = current->next;
-		}
+		temp = ht->array[index];
+			while (temp != NULL)
+			{
+				ele_count = print_ele(ele_count, temp);
+				temp = temp->next;
+			}
 	}
 	printf("}\n");
 }
