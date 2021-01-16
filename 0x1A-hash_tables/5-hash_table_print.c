@@ -52,6 +52,12 @@ void hash_table_print(const hash_table_t *ht)
 	unsigned int index_max, index, ele_count;
 	hash_node_t *temp = NULL;
 
+	if (ht == NULL || ht->size == 0)
+	{
+		printf("{}\n");
+		return;
+	}
+
 	index_max = ht->size - 1;
 	ele_count = element_count(ht, index_max);
 
