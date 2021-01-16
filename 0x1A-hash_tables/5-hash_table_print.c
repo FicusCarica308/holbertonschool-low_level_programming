@@ -26,7 +26,7 @@ int print_ele(unsigned int ele_count, hash_node_t *temp)
 int element_count(const hash_table_t *ht, unsigned int index_max)
 {
 	unsigned int count = 0, index = 0;
-	hash_node_t *temp;
+	hash_node_t *temp = NULL;
 
 	for (index = 0; index < index_max; index++)
 		if (ht->array[index] != NULL && ht->array[index]->next == NULL)
@@ -50,13 +50,7 @@ int element_count(const hash_table_t *ht, unsigned int index_max)
 void hash_table_print(const hash_table_t *ht)
 {
 	unsigned int index_max, index, ele_count;
-	hash_node_t *temp;
-
-	if (ht == NULL || ht->size == 0)
-	{
-		printf("{}\n");
-		return;
-	}
+	hash_node_t *temp = NULL;
 
 	index_max = ht->size - 1;
 	ele_count = element_count(ht, index_max);
