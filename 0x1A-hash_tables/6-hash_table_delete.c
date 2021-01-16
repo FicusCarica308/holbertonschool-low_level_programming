@@ -11,13 +11,8 @@ void hash_table_delete(hash_table_t *ht)
 
 	if (ht == NULL)
 		return;
-	if (ht->array == NULL)
-	{
-		free(ht);
-		return;
-	}
 
-	index_max = ht->size - 1;
+	index_max = ht->size;
 
 	for (index = 0; index < index_max; index++)
 	{
