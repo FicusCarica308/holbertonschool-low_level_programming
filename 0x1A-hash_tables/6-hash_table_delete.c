@@ -9,8 +9,13 @@ void hash_table_delete(hash_table_t *ht)
 	unsigned int index_max, index;
 	hash_node_t *cur = NULL, *temp = NULL;
 
-	if (ht == NULL || ht->array == NULL)
+	if (ht == NULL)
 		return;
+	if (ht->array == NULL)
+	{
+		free(ht);
+		return;
+	}
 
 	index_max = ht->size - 1;
 
