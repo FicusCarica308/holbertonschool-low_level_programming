@@ -1,32 +1,23 @@
 #include "hash_tables.h"
+
 /**
-*hash_table_get - this function will get the value of a
-*given key from a given hash table
-*@ht: the given hash table to be checker
-*@key: the given key to be found
-*Return: returns the key on success and NULL on failure
-*/
+ * hash_table_get - retrieves element from has table
+ * @ht: the table input
+ * @key: the key to insert at index
+ * Return: value of node at index
+ */
 char *hash_table_get(const hash_table_t *ht, const char *key)
 {
-	unsigned int index;
-	hash_node_t *temp;
+	hash_node_t *node;
 
-	if (ht == NULL || key == NULL || key[0] == '\0')
+	if (key == NULL || !(*key) || ht == NULL)
 		return (NULL);
-
-	index = key_index((const unsigned char *)key, ht->size);
-	if (ht->array[index] == NULL)
-		return (NULL);
-	if (ht->array[index]->next == NULL)
-		return (ht->array[index]->value);
-
-	temp = ht->array[index];
-	while (temp != NULL)
+	node = ht->array[hash_djb2((unsigned char *)key) % ht->size];
+	while (node != NULL)
 	{
-		if (temp->key == key)
-			return (temp->value);
-		temp = temp->next;
+		if (strcmp(node->key, (char *)key) == 0)
+			return (node->value);
+		node = node->next;
 	}
-
 	return (NULL);
 }
