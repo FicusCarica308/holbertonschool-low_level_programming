@@ -30,12 +30,12 @@ int element_count(const hash_table_t *ht, unsigned int index_max)
 
 	for (index = 0; index < index_max; index++)
 	{
-			temp = ht->array[index];
-			while (temp != NULL)
-			{
-				count++;
-				temp = temp->next;
-			}
+		temp = ht->array[index];
+		while (temp != NULL)
+		{
+			count++;
+			temp = temp->next;
+		}
 	}
 	return (count);
 }
