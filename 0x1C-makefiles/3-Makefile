@@ -13,8 +13,6 @@ clean:
 oclean:
 	$(RM) $(OBJ)
 
-fclean:
-	$(RM) *~ holberton
-	$(RM) $(OBJ)
+fclean: clean oclean
 
 re: oclean all
