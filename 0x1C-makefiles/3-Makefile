@@ -4,26 +4,17 @@ OBJ = $(SRC:.c=.o)
 NAME = holberton
 RM = rm -f
 
-.PHONY: all
 all: $(OBJ) $(SRC)
 	$(CC) $(OBJ) -o $(NAME)
 
-.PHONY: clean
-.DELETE_ON_ERROR:
 clean:
 	$(RM) *~ holberton
 
-.PHONY: oclean
-.DELETE_ON_ERROR:
 oclean:
 	$(RM) $(OBJ)
 
-.PHONY: fclean
-.DELETE_ON_ERROR:
 fclean:
 	$(RM) *~ holberton
 	$(RM) $(OBJ)
 
-.PHONY: re
-.DELETE_ON_ERROR:
 re: oclean all
