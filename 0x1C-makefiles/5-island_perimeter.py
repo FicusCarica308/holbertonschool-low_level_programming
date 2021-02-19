@@ -1,10 +1,9 @@
 #!/usr/bin/python3
-"""SUMMARY"""
+"""contains function island_perimeter"""
 
 
 def island_perimeter(grid):
-    """ """
-    new_grid = [[]]
+    """returns the perimeter of the island described in grid"""
     sum = 1
     
     for column in grid:
