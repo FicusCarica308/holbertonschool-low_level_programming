@@ -1,0 +1,1 @@
+This project only contains a URL to a blog post
